@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Fortify Test Automation" verbose="3"
+	parallel="false" thread-count="1">
+	<parameter name="deviceHost" value="localhost" />
+	<parameter name="devicePort" value="4444" />
+	<parameter name="browserName" value="chrome_windows" />
+	<parameter name="webSite" value="https://control.dtitsupport247.net/" />
+
+	<test name="MSuite2">
+		<classes>
+			<class
+				name="com.continuum.fortifysecurity.regression.O365.MSuite1.RegO365Suite2">
+				<methods>
+					<include name="tc001RegO365Suite2"></include>
+					<include name="tc002RegO365Suite2"></include>		
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

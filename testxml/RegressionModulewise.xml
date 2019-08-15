@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Fortify Regression Suites" parallel="tests"
+	thread-count="120" data-provider-thread-count="120" preserve-order="true">
+	<parameter name="deviceHost" value="localhost" />
+	<parameter name="devicePort" value="4444" />
+
+	<parameter name="browserName" value="chrome_windows" />
+	<parameter name="webSite" value="https://control.dtitsupport247.net/" />
+
+	<test name="R_Login" thread-count="1" parallel="false">
+		<classes>
+			<class
+				name="com.continuum.fortifysecurity.regression.O365.MSuite1.RegO365Suite1" />
+			<class
+				name="com.continuum.fortifysecurity.regression.O365.MSuite1.RegO365Suite2" />
+		</classes>
+	</test>
+
+	<test name="R_O365" thread-count="1" parallel="false">
+		<classes>
+			<class
+				name="com.continuum.fortifysecurity.regression.Login.MSuite2.RegLoginSuite1" />
+			<class
+				name="com.continuum.fortifysecurity.regression.Login.MSuite2.RegLoginSuite2" />
+		</classes>
+	</test>
+</suite>
